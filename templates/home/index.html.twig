@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block stylesheets %}
+{{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block body %}
+
+
+
+<main>
+    <div>
+        <div class="home">
+        <h1 class="text-center fs-1 text-white">Dictionnaire des plantes</h1>
+        <label for="name">
+        </label>
+        <div class="d-flex justify-content-center">
+        <input class=" d-flex justify-content-end rounded-4" type="text" id="name" name="name" required minlength="4" maxlength="10"
+            size="18">
+            <button type="submit" class="btn d-flex align-items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FFFF" class="bi bi-search" viewbox="0 0 16 16">
+					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+				<label class="btn text-light fw-bold ps-2 fs-3 d-none d-sm-block" for="input">Rechercher</label>
+			</button>
+</div></div>
+    </div>
+    <h2 class="p-4 fs-1 text-center ">Categories des plantes</h2>
+
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="container-fluid rounded-5 row p-5 row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card c1 my-4 " style="height:18rem">
+                <div class="card-body">
+                    <h5 class="text-center text-white card-title">Fleurs</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card c2 my-4 " style="height:18rem">
+                <div class="card-body ">
+                    <h5 class="text-center text-white card-title">Plantes grasses</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card c3 my-4 " style="height:18rem">
+                <h5 class="text-center text-white card-title">Arbustes fleuries</h5>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row p-5 row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card c4 my-4 " style="height:18rem">
+                <div class="card-body">
+                    <h5 class="text-center text-white card-title">Plantes aromatiques</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card c5 my-4 " style="height:18rem">
+                <div class="card-body">
+                    <h5 class="text-center text-white card-title">Cactus</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card c6 my-4 " style="height:18rem">
+                <div class="card-body">
+                    <h5 class=" text-center text-white card-title">Plantes carnivores</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
