@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Category{% endblock %}
+
 
 {% block stylesheets %}
 {{ encore_entry_link_tags('home') }}
@@ -32,49 +33,17 @@
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="container-fluid rounded-5 row p-5 row-cols-1 row-cols-md-3 g-4">
+        {% for category in categories %}
         <div class="col">
-            <div class="card c1 my-4 " style="height:18rem">
+            <div class="card  my-4 " style="height:18rem; background-image:url('{{category.photo}}">
                 <div class="card-body">
-                    <h5 class="text-center text-white card-title">Fleurs</h5>
+                    <h5 class="text-center  card-title text-white">{{ category.name }}</h5>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card c2 my-4 " style="height:18rem">
-                <div class="card-body ">
-                    <h5 class="text-center text-white card-title">Plantes grasses</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card c3 my-4 " style="height:18rem">
-                <h5 class="text-center text-white card-title">Arbustes fleuries</h5>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="row p-5 row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card c4 my-4 " style="height:18rem">
-                <div class="card-body">
-                    <h5 class="text-center text-white card-title">Plantes aromatiques</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card c5 my-4 " style="height:18rem">
-                <div class="card-body">
-                    <h5 class="text-center text-white card-title">Cactus</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card c6 my-4 " style="height:18rem">
-                <div class="card-body">
-                    <h5 class=" text-center text-white card-title">Plantes carnivores</h5>
-                </div>
-            </div>
-        </div>
+        {% else %}
+        Aucune categorie trouvée.
+        {% endfor %}
     </div>
 </main>
 

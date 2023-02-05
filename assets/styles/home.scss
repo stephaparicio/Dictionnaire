@@ -22,9 +22,19 @@
 }
 
 .c1{
-    height: 100px;
+    height: 600px;
     padding-top: 50px;
     background-image: url('../image/fleur.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+.c2{
+    height: 100px;
+    padding-top: 50px;
+    background-image: url('../image/amandier.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

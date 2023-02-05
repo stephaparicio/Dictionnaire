@@ -30,7 +30,8 @@ class UserFixtures extends Fixture
               $contributor,
               'contributorpassword'
           );
-  
+          $contributor->setFirstname('contri');
+          $contributor->setLastname('butor');
           $contributor->setPassword($hashedPassword);
           $manager->persist($contributor);
   
@@ -43,6 +44,8 @@ class UserFixtures extends Fixture
               'adminpassword'
           );
           $admin->setPassword($hashedPassword);
+          $admin->setFirstname('steph');
+          $admin->setLastname('GARCIA');
           $manager->persist($admin);
   
 
