@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plante{% endblock %}
+
+{% block stylesheets %}
+{{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block body %}
+
+<main>
+    <div>
+        <div class="c2">
+            <h1 class="text-center  fs-1 text-white">Plante</h1>
+
+
+        </div>
+    </div>
+    <h2 class="p-4 fs-1 text-center ">Entretien</h2>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-2">
+                <img src="{{ asset('build/images/eau.png') }}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">L'eau</h5>
+                    <p class="card-text">un arrosage régulier ou pas, selon la variété ;
+                        un nettoyage des feuilles et un rempotage de la plante quand le système racinaire devient
+                        trop important pour les plantations d'intérieur ;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-2">
+                <img src="{{ asset('build/images/soleil.png') }}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">Le soleil</h5>
+                    <p class="card-text">un arrosage régulier ou pas, selon la variété ;
+                        un nettoyage des feuilles et un rempotage de la plante quand le système racinaire devient
+                        trop important pour les plantations d'intérieur ;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-2">
+                <img src="{{ asset('build/images/taille.png') }}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">La taille</h5>
+                    <p class="card-text">un arrosage régulier ou pas, selon la variété ;
+                        un nettoyage des feuilles et un rempotage de la plante quand le système racinaire devient
+                        trop important pour les plantations d'intérieur ;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-2">
+                <img src="{{ asset('build/images/cotton.png') }}" class="img-fluid rounded-start" alt="image">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">Les soins</h5>
+                    <p class="card-text">un arrosage régulier ou pas, selon la variété ;
+                        un nettoyage des feuilles et un rempotage de la plante quand le système racinaire devient
+                        trop important pour les plantations d'intérieur ;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+
+{% endblock %}
