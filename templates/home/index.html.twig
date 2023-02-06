@@ -35,11 +35,13 @@
     <div class="container-fluid rounded-5 row p-5 row-cols-1 row-cols-md-3 g-4">
         {% for category in categories %}
         <div class="col">
-            <div class="card  my-4 " style="height:18rem; background-image:url('{{category.photo}}">
+            <a href="show/{{ category.id }}">
+            <div class="card  my-4 " style="height:18rem; background-image:url('{{ vich_uploader_asset(category) }}')">
                 <div class="card-body">
                     <h5 class="text-center  card-title text-white">{{ category.name }}</h5>
                 </div>
             </div>
+            </a>
         </div>
         {% else %}
         Aucune categorie trouvée.

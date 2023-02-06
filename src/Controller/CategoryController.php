@@ -17,4 +17,21 @@ class CategoryController extends AbstractController
             'categories' => $categories,
         ]);
     }
+
+
+    #[Route('/show/{id<^[0-9]+$>}', name: 'show')]
+public function show(int $id, CategoryRepository $categoryRepository):Response
+{
+    $category = $categoryRepository->findOneBy(['id' => $id]);
+  
+
+    if (!$category) {
+        throw $this->createNotFoundException(
+            'No category with id : '.$id.' found in category\'s table.'
+        );
+    }
+    return $this->render('category/show.html.twig', [
+        'category' => $category,
+    ]);
+}
 }

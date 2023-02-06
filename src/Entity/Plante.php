@@ -35,6 +35,10 @@ class Plante
     #[ORM\Column(type: Types::TEXT)]
     private ?string $care = null;
 
+    #[ORM\ManyToOne(inversedBy: 'plantes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +124,18 @@ class Plante
     public function setCare(string $care): self
     {
         $this->care = $care;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
